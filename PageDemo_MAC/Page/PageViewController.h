@@ -10,7 +10,7 @@
 
 @interface PageViewController : NSViewController
 
-@property(nonatomic, strong) NSArray *imageArray;
+@property(nonatomic, strong) NSArray<NSString *> *imageArray;
 
 @property (weak) IBOutlet NSView *contentView;
 @property (weak) IBOutlet NSButton *freButton;

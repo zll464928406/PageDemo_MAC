@@ -20,6 +20,7 @@
 		A32DE3C51EEA9DE70010817C /* btn-next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A32DE3BC1EEA9DE70010817C /* btn-next@3x.png */; };
 		A32DE3C61EEA9DE70010817C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE3BE1EEA9DE70010817C /* PageViewController.m */; };
 		A32DE3C71EEA9DE70010817C /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32DE3BF1EEA9DE70010817C /* PageViewController.xib */; };
+		A32DE3CA1EEAA50E0010817C /* MXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE3C91EEAA50E0010817C /* MXPageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		A32DE3BD1EEA9DE70010817C /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		A32DE3BE1EEA9DE70010817C /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		A32DE3BF1EEA9DE70010817C /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
+		A32DE3C81EEAA50E0010817C /* MXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPageControl.h; sourceTree = "<group>"; };
+		A32DE3C91EEAA50E0010817C /* MXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				A32DE3BD1EEA9DE70010817C /* PageViewController.h */,
 				A32DE3BE1EEA9DE70010817C /* PageViewController.m */,
 				A32DE3BF1EEA9DE70010817C /* PageViewController.xib */,
+				A32DE3C81EEAA50E0010817C /* MXPageControl.h */,
+				A32DE3C91EEAA50E0010817C /* MXPageControl.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A32DE3A11EEA9CDF0010817C /* ViewController.m in Sources */,
+				A32DE3CA1EEAA50E0010817C /* MXPageControl.m in Sources */,
 				A32DE39E1EEA9CDF0010817C /* main.m in Sources */,
 				A32DE39B1EEA9CDF0010817C /* AppDelegate.m in Sources */,
 				A32DE3C61EEA9DE70010817C /* PageViewController.m in Sources */,
@@ -343,6 +349,7 @@
 				A32DE3AC1EEA9CDF0010817C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
