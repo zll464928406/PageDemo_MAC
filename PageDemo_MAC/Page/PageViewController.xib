@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PageViewController">
+            <connections>
+                <outlet property="contentView" destination="k7d-mc-m0Z" id="Azs-3u-gz8"/>
+                <outlet property="freButton" destination="b1t-NZ-Mgm" id="S0k-Sc-v7m"/>
+                <outlet property="nextButton" destination="MNv-DF-490" id="l28-8Z-4ug"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-mc-m0Z">
+                    <rect key="frame" x="34" y="20" width="333" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1t-NZ-Mgm">
+                    <rect key="frame" x="0.0" y="226" width="32" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btn-fre" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="kG9-HY-hov">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="freButtonClicked:" target="-2" id="hKV-Zs-eL2"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNv-DF-490">
+                    <rect key="frame" x="368" y="226" width="32" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btn-next" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="HJk-9B-h9y">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="nextButtonClicked:" target="-2" id="eZ6-If-iug"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="193" y="85"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="btn-fre" width="32" height="48"/>
+        <image name="btn-next" width="32" height="48"/>
+    </resources>
+</document>
