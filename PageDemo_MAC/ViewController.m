@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 #import "PageViewController.h"
+#import "Masonry.h"
+
+@interface ViewController ()
+
+@property (nonatomic, strong) PageViewController *pageViewController;
+
+@end
 
 @implementation ViewController
 
@@ -15,7 +22,12 @@
     [super viewDidLoad];
 
     
-    
+    self.pageViewController = [[PageViewController alloc] init];
+    [self.view addSubview:self.pageViewController.view];
+    [self.pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+
 }
 
 

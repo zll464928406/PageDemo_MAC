@@ -9,8 +9,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PageViewController">
             <connections>
                 <outlet property="contentView" destination="k7d-mc-m0Z" id="Azs-3u-gz8"/>
-                <outlet property="freButton" destination="b1t-NZ-Mgm" id="S0k-Sc-v7m"/>
-                <outlet property="nextButton" destination="MNv-DF-490" id="l28-8Z-4ug"/>
+                <outlet property="freButton" destination="b1t-NZ-Mgm" id="GsX-qu-vee"/>
+                <outlet property="nextButton" destination="MNv-DF-490" id="v2X-Ae-7TL"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -20,34 +20,49 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-mc-m0Z">
-                    <rect key="frame" x="34" y="20" width="333" height="460"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="k7d-mc-m0Z">
+                    <rect key="frame" x="34" y="0.0" width="333" height="500"/>
                 </customView>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1t-NZ-Mgm">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="b1t-NZ-Mgm">
                     <rect key="frame" x="0.0" y="226" width="32" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="sjz-6G-diZ"/>
+                    </constraints>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btn-fre" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="kG9-HY-hov">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="freButtonClicked:" target="-2" id="hKV-Zs-eL2"/>
+                        <action selector="freButtonClicked:" target="-2" id="P65-GZ-A4R"/>
                     </connections>
                 </button>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNv-DF-490">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="MNv-DF-490">
                     <rect key="frame" x="368" y="226" width="32" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="VfX-iH-nt1"/>
+                        <constraint firstAttribute="height" constant="48" id="z6w-ne-J31"/>
+                    </constraints>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btn-next" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="HJk-9B-h9y">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="nextButtonClicked:" target="-2" id="eZ6-If-iug"/>
+                        <action selector="nextButtonClicked:" target="-2" id="jM6-nC-Q3M"/>
                     </connections>
                 </button>
             </subviews>
-            <point key="canvasLocation" x="193" y="85"/>
+            <constraints>
+                <constraint firstItem="k7d-mc-m0Z" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="34" id="7dk-E7-VHr"/>
+                <constraint firstItem="k7d-mc-m0Z" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="8Bv-Cc-ySm"/>
+                <constraint firstItem="k7d-mc-m0Z" firstAttribute="leading" secondItem="b1t-NZ-Mgm" secondAttribute="trailing" constant="2" id="ETL-Gr-mKd"/>
+                <constraint firstAttribute="trailing" secondItem="MNv-DF-490" secondAttribute="trailing" id="Fdv-Nn-qjC"/>
+                <constraint firstItem="MNv-DF-490" firstAttribute="top" secondItem="b1t-NZ-Mgm" secondAttribute="top" id="I5c-rd-HAb"/>
+                <constraint firstItem="k7d-mc-m0Z" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Zz1-5j-mjb"/>
+                <constraint firstAttribute="bottom" secondItem="k7d-mc-m0Z" secondAttribute="bottom" id="c3A-ty-WnU"/>
+                <constraint firstItem="k7d-mc-m0Z" firstAttribute="centerY" secondItem="b1t-NZ-Mgm" secondAttribute="centerY" id="kAG-w7-qXM"/>
+                <constraint firstItem="b1t-NZ-Mgm" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="od2-bo-PlO"/>
+            </constraints>
+            <point key="canvasLocation" x="172" y="65"/>
         </customView>
     </objects>
     <resources>
