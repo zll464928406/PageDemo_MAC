@@ -21,7 +21,6 @@
 		A32DE3C61EEA9DE70010817C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE3BE1EEA9DE70010817C /* PageViewController.m */; };
 		A32DE3C71EEA9DE70010817C /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32DE3BF1EEA9DE70010817C /* PageViewController.xib */; };
 		A32DE3CA1EEAA50E0010817C /* MXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE3C91EEAA50E0010817C /* MXPageControl.m */; };
-		A32DE4351EEEB24E0010817C /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE4341EEEB24E0010817C /* PageView.m */; };
 		A32DE4501EEEB30A0010817C /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE4381EEEB30A0010817C /* MASCompositeConstraint.m */; };
 		A32DE4511EEEB30A0010817C /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE43B1EEEB30A0010817C /* MASConstraint.m */; };
 		A32DE4521EEEB30A0010817C /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A32DE43D1EEEB30A0010817C /* MASConstraintMaker.m */; };
@@ -55,8 +54,6 @@
 		A32DE3BF1EEA9DE70010817C /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
 		A32DE3C81EEAA50E0010817C /* MXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPageControl.h; sourceTree = "<group>"; };
 		A32DE3C91EEAA50E0010817C /* MXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPageControl.m; sourceTree = "<group>"; };
-		A32DE4331EEEB24E0010817C /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
-		A32DE4341EEEB24E0010817C /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 		A32DE4371EEEB30A0010817C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		A32DE4381EEEB30A0010817C /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		A32DE4391EEEB30A0010817C /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -150,8 +147,6 @@
 				A32DE3BF1EEA9DE70010817C /* PageViewController.xib */,
 				A32DE3C81EEAA50E0010817C /* MXPageControl.h */,
 				A32DE3C91EEAA50E0010817C /* MXPageControl.m */,
-				A32DE4331EEEB24E0010817C /* PageView.h */,
-				A32DE4341EEEB24E0010817C /* PageView.m */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -273,7 +268,6 @@
 				A32DE3A11EEA9CDF0010817C /* ViewController.m in Sources */,
 				A32DE4551EEEB30A0010817C /* MASViewConstraint.m in Sources */,
 				A32DE4531EEEB30A0010817C /* MASLayoutConstraint.m in Sources */,
-				A32DE4351EEEB24E0010817C /* PageView.m in Sources */,
 				A32DE3CA1EEAA50E0010817C /* MXPageControl.m in Sources */,
 				A32DE4581EEEB30A0010817C /* View+MASAdditions.m in Sources */,
 				A32DE4501EEEB30A0010817C /* MASCompositeConstraint.m in Sources */,

@@ -16,4 +16,6 @@
 @property (weak) IBOutlet NSButton *freButton;
 @property (weak) IBOutlet NSButton *nextButton;
 
+- (instancetype)initWithImageArray:(NSArray<NSString*>*)imageArray;
+
 @end

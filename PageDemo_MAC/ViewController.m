@@ -21,13 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-    self.pageViewController = [[PageViewController alloc] init];
+    NSArray *imageArray = @[@"btn-fre",@"btn-next",@"btn-next"];
+    self.pageViewController = [[PageViewController alloc] initWithImageArray:imageArray];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-
 }
 
 

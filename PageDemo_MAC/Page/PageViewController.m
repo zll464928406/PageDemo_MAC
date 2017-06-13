@@ -7,24 +7,36 @@
 //
 
 #import "PageViewController.h"
+#import "MXPageControl.h"
 
-@interface PageViewController ()
+@interface PageViewController ()<MXPageControlDelegate>
 
 @property (nonatomic, strong) NSView *scrollView;
 @property (nonatomic, assign) NSInteger currentIndex;
+
+@property (nonatomic, strong) MXPageControl *pageControl;
 
 @end
 
 @implementation PageViewController
 
+- (instancetype)initWithImageArray:(NSArray<NSString*>*)imageArray
+{
+    self = [[PageViewController alloc] init];
+    if (self)
+    {
+        self.imageArray = imageArray;
+        self.currentIndex = 0;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.currentIndex = 0;
     
     self.view.wantsLayer = YES;
     self.view.layer.backgroundColor = [NSColor orangeColor].CGColor;
-    self.imageArray = @[@"btn-fre",@"btn-next"];
     
     CGFloat width = self.contentView.frame.size.width;
     CGFloat height = self.contentView.frame.size.height;
@@ -57,36 +69,30 @@
         [self.scrollView addSubview:view];
     }
     
-    /*
      // Setup page control
-     NSRect frame = self.leftContentView.frame;
-     self.control = [[MXPageControl alloc] init];
-     [self.control setDelegate: self];
-     [self.control setNumberOfPages: 4];
-     [self.control setIndicatorDiameterSize: 15];
-     [self.control setIndicatorMargin: 5];
-     [self.control setCurrentPage: 0];
-     [self.control setDrawingBlock: ^(NSRect frame, NSView *aView, BOOL isSelected, BOOL isHighlighted){
-     frame = CGRectInset(frame, 2.0, 2.0);
-     NSBezierPath *path = [NSBezierPath bezierPathWithOvalInRect: frame];
-     NSColor *color = isSelected ? [NSColor whiteColor] :
-     [NSColor colorWithCalibratedRed: (149.0f / 255.0) green: (204.0f / 255.0) blue: (249.0f / 255.0) alpha: 1.0];
-     [color set];
-     [path fill];
-     }];
-     [self.leftContentView addSubview:self.control];
-     CGSize size = [self.control intrinsicContentSize];
-     [self.control setFrame: CGRectMake((frame.size.width - size.width)/2.0f, 15.0f, size.width, size.height)];
-     */
+    NSRect frame = self.contentView.frame;
+    self.pageControl = [[MXPageControl alloc] init];
+    [self.pageControl setDelegate: self];
+    [self.pageControl setNumberOfPages: self.imageArray.count];
+    [self.pageControl setIndicatorDiameterSize: 15];
+    [self.pageControl setIndicatorMargin: 5];
+    [self.pageControl setCurrentPage: 0];
+    [self.pageControl setDrawingBlock: ^(NSRect frame, NSView *aView, BOOL isSelected, BOOL isHighlighted){
+    frame = CGRectInset(frame, 2.0, 2.0);
+    NSBezierPath *path = [NSBezierPath bezierPathWithOvalInRect: frame];
+    NSColor *color = isSelected ? [NSColor whiteColor] :
+    [NSColor colorWithCalibratedRed: (149.0f / 255.0) green: (204.0f / 255.0) blue: (249.0f / 255.0) alpha: 1.0];
+    [color set];
+    [path fill];
+    }];
+    [self.contentView addSubview:self.pageControl];
+    CGSize size = [self.pageControl intrinsicContentSize];
+    [self.pageControl setFrame: CGRectMake((frame.size.width - size.width)/2.0f, 15.0f, size.width, size.height)];
 }
 
-
-
 #pragma mark - Private Methods
-#pragma mark - Private Method
 - (void)setCurrentImageWithIndex:(NSInteger)index
 {
-    BOOL nextBtnTapped = self.currentIndex > index ? YES : NO;
     self.currentIndex = index;
     
     self.freButton.hidden = (index == 0);
@@ -103,11 +109,19 @@
 {
     NSInteger index = self.currentIndex;
     [self setCurrentImageWithIndex:index - 1];
+    [self.pageControl setCurrentPage:index - 1];
 }
 - (IBAction)nextButtonClicked:(id)sender
 {
     NSInteger index = self.currentIndex;
     [self setCurrentImageWithIndex:index + 1];
+    [self.pageControl setCurrentPage:index + 1];
+}
+
+#pragma mark - MXPageControlDelegate
+-(void)pageControl: (MXPageControl *)pageControl didSelectPageAtIndex: (NSInteger)index
+{
+    [self setCurrentImageWithIndex:index];
 }
 
 @end
